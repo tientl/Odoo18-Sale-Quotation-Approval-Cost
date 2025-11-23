@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-inherit="account.TaxTotalsField" t-inherit-mode="extension" owl="1">
+        <xpath expr="//tr[2]" position="after">
+            <tr>
+                <td class="o_td_label">
+                    <label class="o_form_label o_tax_total_label">Total Cost</label>
+                </td>
+
+                <td class="o_list_monetary">
+                    <span
+                        name="total_cost"
+                        t-att-class="{'oe_subtotal_footer_separator': totals.has_tax_groups}"
+                        t-out="formatMonetary(totals.total_cost)"
+                        style="font-size: 1.3em; font-weight: bold; white-space: nowrap;"
+                    />
+                </td>
+            </tr>
+        </xpath>
+    </t>
+</templates>
