@@ -4,9 +4,9 @@
     'summary': 'A custom module for Odoo',
     'description': 'This is a Sale Quotation Approval Cost module.',
     'author': 'TienLT',
-    'depends': ['sale'],
+    'depends': ["sale_management", "account", 'crm'],
     'data': [
-        # 'security/sale_approval_security.xml',
+        'security/ir.model.access.csv',
         'views/sale_order_views.xml',
     ],
     'installable': True,

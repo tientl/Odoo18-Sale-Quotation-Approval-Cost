@@ -1,2 +1,4 @@
 # security/ir.model.access.csv
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_order,sale.order,model_sale_order,sale_approval_cost.group_sale_person,1,1,1,0
+access_sale_order_line,sale.order.line,model_sale_order_line,sale_approval_cost.group_sale_person,1,1,1,0
