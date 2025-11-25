@@ -9,33 +9,21 @@
                 <xpath expr="//field[@name='order_line']//list" position="inside">
                     <field name="cost"/>
                 </xpath>
-                <!-- <xpath expr="//sheet" position="inside">
-                    <group>
-                        <field name="approval_state" readonly="1"/>
-                        <field name="approved_by" readonly="1"/>
-                        <field name="approved_date" readonly="1"/>
-                        <field name="rejected_by" readonly="1"/>
-                        <field name="rejected_date" readonly="1"/>
-                    </group>
-                </xpath> -->
                 <xpath expr="//header/button[@id='send_by_email_primary']" position="after">
-                    <field name="approval_rule" invisible="0"/>
+                    <field name="state" invisible="1"/>
+                    <field name="approval_rule" invisible="1"/>
                     <button name="action_submit_for_approval" type="object" string="Submit for Approval"
-                        invisible="approval_rule == 'none'"
-                        groups="sales_team.group_sale_salesman" class="btn-primary"/>
+                        invisible="approval_rule == 'none' or state != 'draft'" class="btn-primary"/>
                     <button name="action_approve" type="object" string="Approve"
-                        visible="state == 'to_approve'"
-                        groups="sales_team.group_sale_salesman_all_leads,sales_team.group_sale_manager,account.group_account_manager" class="btn-success"/>
+                        invisible="state not in ['wait_lead', 'wait_manager', 'wait_finance']" class="btn-success"/>
                     <button name="action_reject" type="object" string="Reject"
-                        visible="state == 'to_approve'"
-                        groups="sales_team.group_sale_salesman_all_leads,sales_team.group_sale_manager,account.group_account_manager" class="btn-danger"/>
+                        invisible="state not in ['wait_lead', 'wait_manager', 'wait_finance']"
+                        class="btn-danger"/>
                 </xpath>
                 <xpath expr="//header/button[@id='send_by_email_primary']" position="attributes">
-                    <attribute name="invisible">approval_rule != 'none'</attribute>
+                    <attribute name="invisible">(approval_rule != 'none' and state != 'approved') or (state != 'draft' and approval_rule == 'none')</attribute>
                 </xpath>
-                <!-- <xpath expr="//header/field[@name='state']" position="attributes">
-                    <attribute name="statusbar_visible">draft,to_approve,sent,sale</attribute>
-                </xpath> -->
+                
             </field>
         </record>
     </data>
