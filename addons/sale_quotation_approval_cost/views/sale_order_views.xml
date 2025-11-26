@@ -15,15 +15,49 @@
                     <button name="action_submit_for_approval" type="object" string="Submit for Approval"
                         invisible="approval_rule == 'none' or state != 'draft'" class="btn-primary"/>
                     <button name="action_approve" type="object" string="Approve"
-                        invisible="state not in ['wait_lead', 'wait_manager', 'wait_finance']" class="btn-success"/>
+                        invisible="state not in ['wait_lead', 'wait_manager', 'wait_finance']"
+                        confirm="Approve this quotation?"
+                        class="btn-success"/>
                     <button name="action_reject" type="object" string="Reject"
                         invisible="state not in ['wait_lead', 'wait_manager', 'wait_finance']"
+                        confirm="Reject this quotation?"
                         class="btn-danger"/>
                 </xpath>
                 <xpath expr="//header/button[@id='send_by_email_primary']" position="attributes">
                     <attribute name="invisible">(approval_rule != 'none' and state != 'approved') or (state != 'draft' and approval_rule == 'none')</attribute>
                 </xpath>
+                <xpath expr="//header/button[@name='action_confirm'][2]" position="attributes">
+                    <attribute name="invisible">approval_rule != 'none' or state != 'draft'</attribute>
+                </xpath>
                 
+            </field>
+        </record>
+        <record id="sale_order_filter_approval_roles" model="ir.ui.view">
+            <field name="name">sale.order.search.approval.roles</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <filter name="my_sale_orders_filter" position="after">
+                    <separator/>
+                    <filter string="Team Leader Approvals" name="team_leader_to_approve"
+                        domain="[('state', '=', 'wait_lead'), ('team_id.user_id', '=', uid)]"/>
+                    <filter string="Manager Approvals" name="manager_to_approve"
+                        domain="[('state', '=', 'wait_manager')]"
+                        groups="sales_team.group_sale_manager"/>
+                    <filter string="Finance Approvals" name="finance_to_approve"
+                        domain="[('state', '=', 'wait_finance')]"
+                        groups="account.group_account_manager"/>
+                </filter>
+            </field>
+        </record>
+        <record id="sale_order_search_default_dynamic_roles" model="ir.ui.view">
+            <field name="name">sale.order.search.default.dynamic.roles</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+            <field name="arch" type="xml">
+                <filter name="my_quotation" position="attributes">
+                    <attribute name="domain">[('approval_default_domain', '=', True)]</attribute>
+                </filter>
             </field>
         </record>
     </data>

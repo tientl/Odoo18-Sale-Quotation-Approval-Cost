@@ -1,0 +1,233 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_quotation_approval_cost
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20251121\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-26 07:45+0000\n"
+"PO-Revision-Date: 2025-11-26 07:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "%s approval needed: %s"
+msgstr "%s Cần phê duyệt: %s"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields,field_description:sale_quotation_approval_cost.field_sale_order__approval_default_domain
+msgid "Approval Default Domain"
+msgstr "Miền lọc mặc định phê duyệt"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields,field_description:sale_quotation_approval_cost.field_sale_order__approval_rule
+msgid "Approval Rule"
+msgstr "Quy tắc phê duyệt"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "Approval flow is not defined for this stage."
+msgstr "Luồng phê duyệt chưa được định nghĩa cho giai đoạn này."
+
+#. module: sale_quotation_approval_cost
+#: model_terms:ir.ui.view,arch_db:sale_quotation_approval_cost.view_order_form_inherit_cost_approval
+msgid "Approve"
+msgstr "Phê duyệt"
+
+#. module: sale_quotation_approval_cost
+#: model_terms:ir.ui.view,arch_db:sale_quotation_approval_cost.view_order_form_inherit_cost_approval
+msgid "Approve this quotation?"
+msgstr "Phê duyệt báo giá này?"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields.selection,name:sale_quotation_approval_cost.selection__sale_order__state__approved
+msgid "Approved"
+msgstr "Đã phê duyệt"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "Approver"
+msgstr "Người phê duyệt"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields.selection,name:sale_quotation_approval_cost.selection__sale_order__state__wait_finance
+msgid "Approving: Finance"
+msgstr "Đang duyệt: Tài chính"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields.selection,name:sale_quotation_approval_cost.selection__sale_order__state__wait_manager
+msgid "Approving: Manager"
+msgstr "Đang duyệt: Quản lý Sale"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields.selection,name:sale_quotation_approval_cost.selection__sale_order__state__wait_lead
+msgid "Approving: Team Leader"
+msgstr "Đang duyệt: Trưởng nhóm Sale"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields,field_description:sale_quotation_approval_cost.field_sale_order_line__cost
+msgid "Cost"
+msgstr "Chi phí"
+
+#. module: sale_quotation_approval_cost
+#: model_terms:ir.ui.view,arch_db:sale_quotation_approval_cost.sale_order_filter_approval_roles
+msgid "Finance Approvals"
+msgstr "Phê duyệt tài chính"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "Finance Manager"
+msgstr "Quản lý tài chính"
+
+#. module: sale_quotation_approval_cost
+#: model_terms:ir.ui.view,arch_db:sale_quotation_approval_cost.sale_order_filter_approval_roles
+msgid "Manager Approvals"
+msgstr "Phê duyệt quản lý"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields.selection,name:sale_quotation_approval_cost.selection__sale_order__approval_rule__none
+msgid "No Approval"
+msgstr "Không cần phê duyệt"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "Open Quotation"
+msgstr "Mở báo giá"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid ""
+"Please ensure all order line information is complete before submitting for "
+"approval."
+msgstr "Vui lòng đảm bảo thông tin dòng bán đầy đủ trước khi gửi phê duyệt."
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid ""
+"Please review quotation %s for approval.<br/>Customer: %s<br/>Total: %s"
+msgstr "Vui lòng xem xét báo giá %s để phê duyệt.<br/>Khách hàng: %s<br/>Tổng: %s"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "Quotation %s has been approved.<br/>Customer: %s<br/>Total: %s"
+msgstr "Báo giá %s đã được phê duyệt.<br/>Khách hàng: %s<br/>Tổng: %s"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "Quotation approved: %s"
+msgstr "Báo giá đã duyệt: %s"
+
+#. module: sale_quotation_approval_cost
+#: model_terms:ir.ui.view,arch_db:sale_quotation_approval_cost.view_order_form_inherit_cost_approval
+msgid "Reject"
+msgstr "Từ chối"
+
+#. module: sale_quotation_approval_cost
+#: model_terms:ir.ui.view,arch_db:sale_quotation_approval_cost.view_order_form_inherit_cost_approval
+msgid "Reject this quotation?"
+msgstr "Từ chối báo giá này?"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "Sales Manager"
+msgstr "Quản lý kinh doanh"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model,name:sale_quotation_approval_cost.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn bán hàng"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model,name:sale_quotation_approval_cost.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Đơn bán hàng"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields,field_description:sale_quotation_approval_cost.field_sale_order__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: sale_quotation_approval_cost
+#: model_terms:ir.ui.view,arch_db:sale_quotation_approval_cost.view_order_form_inherit_cost_approval
+msgid "Submit for Approval"
+msgstr "Gửi phê duyệt"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "Team Leader"
+msgstr "Trưởng nhóm"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields.selection,name:sale_quotation_approval_cost.selection__sale_order__approval_rule__full
+msgid "Team Leader + Manager + Finance"
+msgstr "Trưởng nhóm + Quản lý + Tài chính"
+
+#. module: sale_quotation_approval_cost
+#: model_terms:ir.ui.view,arch_db:sale_quotation_approval_cost.sale_order_filter_approval_roles
+msgid "Team Leader Approvals"
+msgstr "Phê duyệt trưởng nhóm"
+
+#. module: sale_quotation_approval_cost
+#: model:ir.model.fields.selection,name:sale_quotation_approval_cost.selection__sale_order__approval_rule__team_leader
+msgid "Team Leader Only"
+msgstr "Chỉ trưởng nhóm"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "This quotation is not in an approval stage."
+msgstr "Báo giá này không ở giai đoạn phê duyệt."
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "This stage can only be %s by %s."
+msgstr "Giai đoạn này chỉ có thể được %s bởi %s."
+
+#. module: sale_quotation_approval_cost
+#. odoo-javascript
+#: code:addons/sale_quotation_approval_cost/static/src/components/tax_totals/tax_totals.xml:0
+#: model:ir.model.fields,field_description:sale_quotation_approval_cost.field_sale_order__total_cost
+msgid "Total Cost"
+msgstr "Tổng chi phí"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "You can't modify when that in approval process."
+msgstr "Không thể chỉnh sửa khi đang trong quy trình phê duyệt."
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "You do not have permission to submit for approval."
+msgstr "Bạn không có quyền gửi phê duyệt."
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "approved"
+msgstr "đã phê duyệt"
+
+#. module: sale_quotation_approval_cost
+#. odoo-python
+#: code:addons/sale_quotation_approval_cost/models/sale_order.py:0
+msgid "rejected"
+msgstr "bị từ chối"
