@@ -26,7 +26,7 @@ services:
       - ./addons:/mnt/extra-addons
       - ./config/odoo.conf:/etc/odoo/odoo.conf
       - ./logs:/var/log/odoo
-    # command: ["odoo", "-i", "base", "-d", "odoo", "-u", "sale_quotation_approval_cost"]
+    # command: ["odoo", "-i", "base", "-d", "odoo"]
     restart: always
 
 volumes:
